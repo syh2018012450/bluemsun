@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>first</title>
+</head>
+<style type="text/css">
+	.divone {
+		width:150px;
+		height:40px;
+		text-align:center;
+		font-size:30px;
+		margin:50px;
+	}
+	.divone1:hover{
+		border:5px green double;
+		border-radius:5px;
+		position:relative;
+		top:-5px;
+		left:-5px;
+	}
+	.one{
+			width:200px;
+			height:40px;
+		}
+		.one:hover{
+			width:200px;
+			height:40px;
+			background-color:blue;
+		}
+		.two{
+			width:140px;
+			height:32px;
+			font-size:28px;
+			line-height:28px;
+			margin:0px auto;
+			text-align:center;
+			position:relative;
+			top:4px;
+			border-top:2px solid #fff;
+			border-bottom:2px solid #fff;
+			border-left:28px solid #fff;
+			border-right:28px solid #fff;
+			position:relative;
+			top:2px;
+		}
+		.two:hover{
+			width:140px;
+			height:32px;
+			font-size:28px;
+			line-height:28px;
+			background-color:blue;
+			margin:0px auto;
+			text-align:center;
+			position:relative;
+			top:4px;
+			border-top:2px solid #fff;
+			border-bottom:2px solid #fff;
+			border-left:28px solid #fff;
+			border-right:28px solid #fff;
+			position:relative;
+			top:2px;
+		}
+		.three{
+			width:136px;
+			height:28px;
+			background-color:#fff;
+			margin:0px auto;
+			position:relative;
+			top:2px;
+		}
+		.out{
+			width:150px;
+			height:30px;
+			/*background-color:pink;*/
+			line-height:30px;
+			font-size:30px;
+			font-family:'幼圆';
+			text-align:center;
+			border:2px solid #ddd;
+			position:relative;
+			top:-2px;
+			left:-2px;
+		}
+		.inside{
+			visibility: hidden;
+			width:154px;
+			height:30px;
+			font-size:30px;
+			line-height:30px;
+			float:left;
+			background-color:#000;
+			color:#fff;
+			font-family:'幼圆';
+			text-align:center;
+			position:relative;
+			top:12px;
+			left:-2px;
+		}
+		.out:hover .inside {
+			visibility:visible;
+		}
+		.out:hover .one0{
+			visibility:visible;
+		}
+		/*为什么两个放一起不行尼？*/
+		.one0{
+			visibility: hidden;
+			width:0px;
+			height:0px;
+			border-width: 10px;
+			border-style: solid;
+			border-color:transparent transparent black transparent;
+			position:relative;
+			top:-8px;
+			left:65px;
+		}
+	</style>
+<body>
+	<div class="out">显现文字<span class="inside">浮动文字</span><div class="one0"></div></div>
+
+	<br><br><br>
+	<div class="one">
+		<div class="two">
+			<div class="three">
+				<span>double</span>
+			</div>
+		</div>	
+	</div>
+
+	<br><br>
+	<div class="divone divone1"><span>double1</span></div>
+</body>
+</html>
+<!-- 注：三角形一定要放在out的里面，否则是不会根据out:hover显示浮动的 -->
